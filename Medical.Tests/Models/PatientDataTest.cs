@@ -5,17 +5,17 @@ using Medical.Core.Models;
 using Medical.Core.Services;
 using Xunit;
 
-namespace Medical.Tests.Services
+namespace Medical.Tests.Models
 {
-    public class SurvivalRaterTest
+    public class PatientDataTest
     {
         [InlineData(41, 40, 90, true, true, true, 47)]
         [InlineData(42, 41, 107, false, true, true, 46)]
         [Theory]
-        public void CalculateSurvivalRateCorrectly(int age, int temp, int heartRate, bool isDiabetic, bool hasCardiacArrest, bool visitedHospital, decimal expected )
+        public void PatientDataCorrectlyCalculatesSurvivalRatingForAPatient(int age, int temp, int heartRate, bool isDiabetic, bool hasCardiacArrest, bool visitedHospital, decimal expected)
         {
             // Arrange
-            SurvivalRater survivalRater = new SurvivalRater();
+            
 
             var person = new Person() { Age = age };
 
@@ -28,10 +28,12 @@ namespace Medical.Tests.Services
                 HeartRate = heartRate
             };
 
+
+            var survivalRater = new SurvivalRater();
+
+            var patientData = new PatientData(patient, survivalRater);
             // Act
-
-
-            var actual = survivalRater.CalculateSurvivalRate(patient);
+            var actual = patientData.SurvivalRating;
 
             // Assert
             Assert.Equal(expected, actual);
