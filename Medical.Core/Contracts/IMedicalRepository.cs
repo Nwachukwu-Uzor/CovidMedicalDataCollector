@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace Medical.Core.Contracts
 {
-    interface IMedicalRepository
+    public interface IMedicalRepository
     {
-        List<IPatient> Patients { get; set; }
-        ISurvivalRater SurvivalRater { get; set; }
+       IList<IPatientData> PatientsList { get; }
 
+        void AddPatientToDatabase(IPatientData PatientData);
     }
 }

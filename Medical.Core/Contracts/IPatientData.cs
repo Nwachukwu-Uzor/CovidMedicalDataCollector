@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Medical.Core.Contracts
 {
-    interface IPatientData
+    public interface IPatientData
     { 
         IPatient Patient { get; }
         decimal SurvivalRating { get; }
