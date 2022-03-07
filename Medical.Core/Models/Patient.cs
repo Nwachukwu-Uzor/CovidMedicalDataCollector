@@ -7,6 +7,7 @@ namespace Medical.Core.Models
 {
     public class Patient : IPatient
     {
+        public string PatientID { get; }
         public IPerson PatientBio { get; private set; }
         public decimal HeartRate { get; set; }
         public decimal BodyTemp  { get; set; }
@@ -17,6 +18,7 @@ namespace Medical.Core.Models
         public Patient(IPerson person)
         {
             PatientBio = person;
+            PatientID = Guid.NewGuid().ToString().Substring(0, 10);
         }
     }
 }

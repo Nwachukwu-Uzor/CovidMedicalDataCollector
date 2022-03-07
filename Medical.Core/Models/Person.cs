@@ -1,15 +1,16 @@
 ﻿using System;
 using Medical.Core.Contracts;
+using Medical.Common;
 
 namespace Medical.Core.Models
 {
     public class Person : IPerson
     {
         private string _fullName;
-        
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        
+
         public string FullName {
             get
             {
@@ -31,6 +32,8 @@ namespace Medical.Core.Models
         }
 
         public int Age { get; set; }
+
+        public Gender Gender { get; set; }
 
         
     }

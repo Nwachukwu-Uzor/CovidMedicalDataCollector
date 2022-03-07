@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medical.Tests", "Medical.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medical.UI", "Medical.UI\Medical.UI.csproj", "{299E1A29-7AD0-46F5-ADFE-3F56B2EBBB99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medical.Common", "Medical.Common\Medical.Common.csproj", "{99DBE399-106B-4B54-AA38-589085911C37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{299E1A29-7AD0-46F5-ADFE-3F56B2EBBB99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{299E1A29-7AD0-46F5-ADFE-3F56B2EBBB99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{299E1A29-7AD0-46F5-ADFE-3F56B2EBBB99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99DBE399-106B-4B54-AA38-589085911C37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99DBE399-106B-4B54-AA38-589085911C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99DBE399-106B-4B54-AA38-589085911C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99DBE399-106B-4B54-AA38-589085911C37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

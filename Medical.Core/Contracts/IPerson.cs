@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Medical.Common;
 
 namespace Medical.Core.Contracts
 {
@@ -10,5 +8,6 @@ namespace Medical.Core.Contracts
         string LastName { get; set; }
         string FullName { get; }
         int Age { get; set; }
+        Gender Gender { get; set; }
     }
 }
