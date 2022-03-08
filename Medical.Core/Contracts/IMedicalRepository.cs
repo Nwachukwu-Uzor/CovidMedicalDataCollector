@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
+using Medical.Core.Models;
+
 
 namespace Medical.Core.Contracts
 {
     public interface IMedicalRepository
     {
-       IList<IPatientData> PatientsList { get; }
+       List<PatientData> PatientsList { get; }
 
-        void AddPatientToDatabase(IPatientData PatientData);
+        void AddPatientToDatabase(PatientData PatientData);
     }
 }

@@ -4,7 +4,13 @@ namespace Medical.Common
 {
     public enum Gender
     {
-        Male,
-        Female
+        MALE,
+        FEMALE
     }
+
+    public enum YESORNO { 
+        YES,
+        NO
+    }
+
 }

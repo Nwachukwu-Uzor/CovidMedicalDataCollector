@@ -8,12 +8,11 @@ namespace Medical.Core.Models
     public class PatientData : IPatientData
     {
         public IPatient Patient { get; }
-        public decimal SurvivalRating { get; }
+        public decimal SurvivalRating { get; set; }
 
-        public PatientData(IPatient patient, ISurvivalRater survivalRater)
+        public PatientData(IPatient patient)
         {
             Patient = patient;
-            SurvivalRating = survivalRater.CalculateSurvivalRate(Patient);
         }
     }
 }

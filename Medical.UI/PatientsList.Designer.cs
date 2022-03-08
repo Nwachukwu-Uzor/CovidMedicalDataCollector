@@ -1,4 +1,5 @@
-﻿namespace Medical.UI
+﻿
+namespace Medical.UI
 {
     partial class PatientsList
     {
@@ -30,12 +31,18 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.fullName = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.gender = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.risk = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.DgvPatientsList = new System.Windows.Forms.DataGridView();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Temperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HeartRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsDiabetic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HasCardiacIssue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hasFever = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.riskRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPatientsList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -45,61 +52,113 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 64);
+            this.panel1.Size = new System.Drawing.Size(1317, 82);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(323, 20);
+            this.label1.Location = new System.Drawing.Point(467, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 20);
+            this.label1.Size = new System.Drawing.Size(104, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "PATIENTS";
             // 
-            // dataGridView1
+            // DgvPatientsList
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.fullName,
-            this.gender,
-            this.risk});
-            this.dataGridView1.Location = new System.Drawing.Point(49, 140);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(683, 186);
-            this.dataGridView1.TabIndex = 1;
+            this.DgvPatientsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvPatientsList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DgvPatientsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPatientsList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FullName,
+            this.Age,
+            this.Gender,
+            this.Temperature,
+            this.HeartRate,
+            this.IsDiabetic,
+            this.HasCardiacIssue,
+            this.hasFever,
+            this.riskRate});
+            this.DgvPatientsList.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.DgvPatientsList.Location = new System.Drawing.Point(22, 181);
+            this.DgvPatientsList.Name = "DgvPatientsList";
+            this.DgvPatientsList.RowHeadersWidth = 51;
+            this.DgvPatientsList.RowTemplate.Height = 29;
+            this.DgvPatientsList.Size = new System.Drawing.Size(1231, 234);
+            this.DgvPatientsList.TabIndex = 1;
             // 
-            // fullName
+            // FullName
             // 
-            this.fullName.HeaderText = "FULL NAME";
-            this.fullName.Name = "fullName";
+            this.FullName.HeaderText = "FULL NAME";
+            this.FullName.MinimumWidth = 6;
+            this.FullName.Name = "FullName";
             // 
-            // gender
+            // Age
             // 
-            this.gender.HeaderText = "GENDER";
-            this.gender.Name = "gender";
+            this.Age.HeaderText = "AGE";
+            this.Age.MinimumWidth = 6;
+            this.Age.Name = "Age";
             // 
-            // risk
+            // Gender
             // 
-            this.risk.HeaderText = "RISK";
-            this.risk.Name = "risk";
+            this.Gender.HeaderText = "GENDER";
+            this.Gender.MinimumWidth = 6;
+            this.Gender.Name = "Gender";
+            // 
+            // Temperature
+            // 
+            this.Temperature.HeaderText = "BODY TEMPERATURE";
+            this.Temperature.MinimumWidth = 6;
+            this.Temperature.Name = "Temperature";
+            // 
+            // HeartRate
+            // 
+            this.HeartRate.HeaderText = "HEART RATE (BMP)";
+            this.HeartRate.MinimumWidth = 6;
+            this.HeartRate.Name = "HeartRate";
+            // 
+            // IsDiabetic
+            // 
+            this.IsDiabetic.HeaderText = "IS PATIENT DIABETIC";
+            this.IsDiabetic.MinimumWidth = 6;
+            this.IsDiabetic.Name = "IsDiabetic";
+            // 
+            // HasCardiacIssue
+            // 
+            this.HasCardiacIssue.HeaderText = "DOES PATIENT HAVE CARDIAC ISSUE";
+            this.HasCardiacIssue.MinimumWidth = 6;
+            this.HasCardiacIssue.Name = "HasCardiacIssue";
+            // 
+            // hasFever
+            // 
+            this.hasFever.HeaderText = "DOES PATIENT HAVE FEVER";
+            this.hasFever.MinimumWidth = 6;
+            this.hasFever.Name = "hasFever";
+            // 
+            // riskRate
+            // 
+            this.riskRate.HeaderText = "RISK RATE";
+            this.riskRate.MinimumWidth = 6;
+            this.riskRate.Name = "riskRate";
             // 
             // PatientsList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 559);
-            this.Controls.Add(this.dataGridView1);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1317, 569);
+            this.Controls.Add(this.DgvPatientsList);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "PatientsList";
-            this.Text = "PatientsList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "PATIENTS LIST";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPatientsList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -108,9 +167,15 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewButtonColumn fullName;
-        private System.Windows.Forms.DataGridViewButtonColumn gender;
-        private System.Windows.Forms.DataGridViewButtonColumn risk;
+        private System.Windows.Forms.DataGridView DgvPatientsList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Temperature;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HeartRate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IsDiabetic;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HasCardiacIssue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hasFever;
+        private System.Windows.Forms.DataGridViewTextBoxColumn riskRate;
     }
 }

@@ -7,6 +7,6 @@ namespace Medical.Core.Contracts
     public interface IPatientData
     { 
         IPatient Patient { get; }
-        decimal SurvivalRating { get; }
+        decimal SurvivalRating { get; set; }
     }
 }
