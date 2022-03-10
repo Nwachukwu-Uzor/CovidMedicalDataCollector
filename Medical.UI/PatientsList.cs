@@ -25,14 +25,14 @@ namespace Medical.UI
             foreach(var patientData in MedicalRepository.PatientsList)
             {
                 DgvPatientsList.Rows.Add(
-                    patientData.Patient.PatientBio.FullName,
-                    patientData.Patient.PatientBio.Age,
-                    patientData.Patient.PatientBio.Gender,
-                    patientData.Patient.BodyTemp,
-                    patientData.Patient.HeartRate,
-                    patientData.Patient.HasDiabeticHistory ? "YES" : "NO",
-                    patientData.Patient.HasCardiacIssue ? "YES" : "NO",
-                    patientData.Patient.HasFeverHistory ? "YES" : "NO",
+                    patientData.FullName,
+                    patientData.Age,
+                    patientData.Gender,
+                    patientData.BodyTemp,
+                    patientData.HeartRate,
+                    patientData.HasDiabeticHistory ? "YES" : "NO",
+                    patientData.HasCardiacIssue ? "YES" : "NO",
+                    patientData.HasFeverHistory ? "YES" : "NO",
                     patientData.SurvivalRating
                 );
             }

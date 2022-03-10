@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 using Medical.Core.Models;
 
@@ -9,8 +7,8 @@ namespace Medical.Core.Contracts
 {
     public interface IMedicalRepository
     {
-       List<PatientData> PatientsList { get; }
+       IList<Patient> PatientsList { get; }
 
-        void AddPatientToDatabase(PatientData PatientData);
+        void AddPatientToDatabase(Patient PatientData);
     }
 }

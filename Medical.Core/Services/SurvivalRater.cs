@@ -12,7 +12,7 @@ namespace Medical.Core.Services
         {
             decimal survivalRate = 1m;
 
-            if (patient.HasCardiacIssue && patient.PatientBio.Age > 40)
+            if (patient.HasCardiacIssue && patient.Age > 40)
             {
                 survivalRate += 7;
             }

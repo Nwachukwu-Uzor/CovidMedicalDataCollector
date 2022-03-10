@@ -8,19 +8,18 @@ namespace Medical.Core.Persistence
 {
     public class MedicalRepository : IMedicalRepository
     {
-        public List<PatientData> PatientsList { get; }
+        public IList<Patient> PatientsList { get; }
         public ISurvivalRater SurvivalRater { get; }
-
-        public MedicalRepository(List<PatientData> patientsList, ISurvivalRater survivalRater)
+        public MedicalRepository(IList<Patient> patientsList, ISurvivalRater survivalRater)
         {
             PatientsList = patientsList;
             SurvivalRater = survivalRater;
         }
 
 
-        public void AddPatientToDatabase(PatientData patient)
+        public void AddPatientToDatabase(Patient patient)
         {
-            patient.SurvivalRating = SurvivalRater.CalculateSurvivalRate(patient.Patient);
+            patient.CalculateSurvivalRating(SurvivalRater.CalculateSurvivalRate);
             PatientsList.Add(patient);
         }
     }

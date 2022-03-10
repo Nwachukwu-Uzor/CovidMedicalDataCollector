@@ -21,7 +21,7 @@ namespace Medical.UI
         {
             InitializeComponent();
             SetStartUpValuesForComboBoxes();
-            var PatientsList = new List<PatientData>();
+            var PatientsList = new List<Patient>();
             var SurvivalRater = new SurvivalRater();
             PatientMedicalRepository = new MedicalRepository(PatientsList, SurvivalRater);
         }
@@ -71,9 +71,7 @@ namespace Medical.UI
                 HasDiabeticHistory = CmbDiabetic.SelectedItem.ToString() == "YES" ? true : false,
                 HasFeverHistory = CmbFever.SelectedItem.ToString() == "YES" ? true : false
             };
-
-            var patientData = new PatientData(patient);
-            PatientMedicalRepository.AddPatientToDatabase(patientData);
+            PatientMedicalRepository.AddPatientToDatabase(patient);
 
             MessageBox.Show("Patient successfully added", "Registration success!");
         }
